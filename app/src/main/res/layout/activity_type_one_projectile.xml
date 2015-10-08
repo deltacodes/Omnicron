@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Velocity"
+        android:textSize="30sp"
+        android:id="@+id/typeOneProjectileVelocityLbl"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        />
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textSize="30sp"
+        android:id="@+id/typeOneProjectileHeightLbl"
+        android:layout_alignTop="@id/typeOneProjectileVelocityLbl"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        />
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textSize="30sp"
+        android:id="@+id/typeOneProjectileTimeLbl"
+        android:layout_alignTop="@id/typeOneProjectileHeightLbl"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        />
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance(X)"
+        android:textSize="30sp"
+        android:id="@+id/typeOneProjectileDistanceLbl"
+        android:layout_alignTop="@id/typeOneProjectileTimeLbl"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        />
+
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:background="@drawable/corner_button"
+        android:id="@+id/typeOneProjectileCalculate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:width="350dp"
+        android:onClick="calculate"
+        android:layout_marginBottom="15dp"/>
+
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear!"
+        android:background="@drawable/corner_button"
+        android:id="@+id/typeOneProjectileClear"
+        android:layout_alignBottom="@id/typeOneProjectileCalculate"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:width="170dp"
+        android:onClick="clear"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="6dp"
+
+        />
+
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_button"
+        android:text="Advanced"
+        android:id="@+id/typeOneProjectileAdvanceCalculate"
+        android:layout_alignBottom="@id/typeOneProjectileCalculate"
+        android:layout_alignParentLeft="true"
+        android:textSize="30sp"
+        android:width="170dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="6dp"
+
+        />
+
+<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/typeOneProjectileVelocity"
+        android:layout_alignTop="@id/typeOneProjectileVelocityLbl"
+        android:layout_alignLeft="@+id/typeOneProjectileClear"/>
+
+<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/typeOneProjectileHeight"
+        android:layout_alignTop="@id/typeOneProjectileHeightLbl"
+        android:layout_alignLeft="@+id/typeOneProjectileClear"/>
+
+<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/typeOneProjectileTime"
+        android:layout_alignTop="@id/typeOneProjectileTimeLbl"
+        android:layout_alignLeft="@+id/typeOneProjectileClear"/>
+
+<EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/typeOneProjectileDistance"
+        android:layout_alignTop="@id/typeOneProjectileDistanceLbl"
+        android:layout_alignParentRight="true"/>
+<Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:prompt="@string/type_Prompt"
+        android:scrollbarSize="50dp"
+        android:entries="@array/projectile_array"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+
+</RelativeLayout>

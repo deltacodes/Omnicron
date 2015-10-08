@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Omnicron Physics Calculator</string>
+    <string name="type_Prompt">Choose a Projectile Type</string>
+
+    <string-array name="projectile_array">
+        <item>Choose a Type</item>
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+        <item>Kinematics Home</item>
+    </string-array>
+    <string name="title_activity_kinematics_home">KinematicsHome</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_type_one_projectile">TypeOneProjectile</string>
+    <string name="title_activity_type_two_projectile">TypeTwoProjectile</string>
+    <string name="title_activity_type_three_projectile">TypeThreeProjectile</string>
+    <string name="title_activity_kinematics">Kinematics</string>
+
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velocity"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileVelocityLbl"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileAngleLbl"
+            android:layout_alignTop="@id/typeThreeProjectileVelocityLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileHeightLbl"
+            android:layout_alignTop="@id/typeThreeProjectileAngleLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileTimeLbl"
+            android:layout_alignTop="@id/typeThreeProjectileHeightLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance(X)"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileDistanceLbl"
+            android:layout_alignTop="@id/typeThreeProjectileTimeLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Height"
+            android:textSize="30sp"
+            android:id="@+id/typeThreeProjectileMaxHeightLbl"
+            android:layout_alignTop="@id/typeThreeProjectileDistanceLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <Button
+            android:layout_width="wrap_content"
+            android:background="@drawable/corner_button"
+            android:layout_height="wrap_content"
+            android:text="Calculate!"
+            android:id="@+id/typeThreeProjectileCalculate"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:width="350dp"
+            android:onClick="calculate"
+            android:layout_marginBottom="15dp" />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear!"
+            android:background="@drawable/corner_button"
+            android:id="@+id/typeThreeProjectileClear"
+            android:layout_alignBottom="@id/typeThreeProjectileCalculate"
+            android:layout_alignParentRight="true"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:onClick="clear"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="7dp"
+
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced"
+            android:background="@drawable/corner_button"
+            android:id="@+id/typeThreeProjectileAdvanceCalculate"
+            android:layout_alignBottom="@id/typeThreeProjectileCalculate"
+            android:layout_alignParentLeft="true"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:onClick="clear"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="7dp"
+
+            />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/typeThreeProjectileVelocity"
+            android:layout_alignTop="@id/typeThreeProjectileVelocityLbl"
+            android:layout_alignLeft="@+id/typeThreeProjectileClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/typeThreeProjectileAngle"
+            android:layout_alignTop="@id/typeThreeProjectileAngleLbl"
+            android:layout_alignLeft="@+id/typeThreeProjectileClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/typeThreeProjectileHeight"
+            android:layout_alignTop="@id/typeThreeProjectileHeightLbl"
+            android:layout_alignLeft="@+id/typeThreeProjectileClear" />
+
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/typeThreeProjectileTime"
+            android:layout_alignTop="@id/typeThreeProjectileTimeLbl"
+            android:layout_alignLeft="@+id/typeThreeProjectileClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/typeThreeProjectileDistance"
+            android:width="170dp"
+            android:layout_alignTop="@id/typeThreeProjectileDistanceLbl"
+            android:layout_alignParentRight="true" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:width="170dp"
+            android:id="@+id/typeThreeProjectileMaxHeight"
+            android:layout_alignTop="@id/typeThreeProjectileMaxHeightLbl"
+            android:layout_alignParentRight="true" />
+
+
+        <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:prompt="@string/type_Prompt"
+                android:scrollbarSize="50dp"
+                android:entries="@array/projectile_array"
+                android:id="@+id/spinner3"
+                android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
