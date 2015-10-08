@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Omnicron.iml" filepath="$PROJECT_DIR$/Omnicron.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Omnicron DeltaCodes.iml" filepath="$PROJECT_DIR$/Omnicron DeltaCodes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

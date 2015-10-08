@@ -14,7 +14,7 @@ public class Kinematics extends ActionBarActivity {
     EditText KinematicVelocityF;
     EditText KinematicTime;
     EditText KinematicDistance;
-    public final double g = 9.8;
+    private double g = 9.8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,15 +156,15 @@ public class Kinematics extends ActionBarActivity {
 
     public void fillEmpty() {
         if (KinematicDistance.getText().toString().isEmpty())
-            KinematicDistance.setText(new Double(0).toString());
+            KinematicDistance.setText(Double.toString(0));
         if (KinematicTime.getText().toString().isEmpty())
-            KinematicTime.setText(new Double(0).toString());
+            KinematicTime.setText(Double.toString(0));
         if (KinematicVelocityI.getText().toString().isEmpty())
-            KinematicVelocityI.setText(new Double(0).toString());
+            KinematicVelocityI.setText(Double.toString(0));
         if (KinematicVelocityF.getText().toString().isEmpty())
-            KinematicVelocityF.setText(new Double(0).toString());
+            KinematicVelocityF.setText(Double.toString(0));
         if (KinematicAcceleration.getText().toString().isEmpty())
-            KinematicAcceleration.setText(new Double(0).toString());
+            KinematicAcceleration.setText(Double.toString(0));
     }
     public double round(double a) {
         return Math.floor(a * 1000) / 1000;
