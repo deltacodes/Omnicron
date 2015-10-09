@@ -18,5 +18,8 @@
     <string name="title_activity_type_three_projectile">TypeThreeProjectile</string>
     <string name="title_activity_kinematics">Kinematics</string>
     <string name="title_activity_motion">Motion</string>
+    <string name="title_activity_physics_home">PhysicsHome</string>
+    <string name="title_activity_chemistry_home">ChemistryHome</string>
+    <string name="title_activity_gas_laws">GasLaws</string>
 
 </resources>

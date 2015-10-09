@@ -1,4 +1,4 @@
-package com.deltaCode.omnicron.app;
+package com.deltaCode.omnicron.app.Physics;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -7,21 +7,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import com.deltaCode.omnicron.app.R;
 
 
-public class KinematicsHome extends AppCompatActivity {
+public class PhysicsHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kinematics_home);
+        setContentView(R.layout.activity_physics_home);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_kinematics_home, menu);
+        getMenuInflater().inflate(R.menu.menu_physics_home, menu);
         return true;
     }
 
@@ -39,12 +40,8 @@ public class KinematicsHome extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void ToProjectilesFromKinematics(View view){
-        Intent intent=new Intent(this,TypeOneProjectile.class);
-        startActivity(intent);
-    }
-    public void ToMotionFromKinematics(View view){
-        Intent intent=new Intent(this,Motion.class);
-        startActivity(intent);
+    public void ToKinematicsFromHomeMethod (View view){
+        Intent intent=new Intent(this,KinematicsHome.class);
+        this.startActivity(intent);
     }
 }

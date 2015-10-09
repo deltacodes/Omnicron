@@ -1,26 +1,20 @@
-package com.deltaCode.omnicron.app;
+package com.deltaCode.omnicron.app.Physics;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Spinner;
+import com.deltaCode.omnicron.app.R;
 
 
-public class TypeThreeProjectile extends ActionBarActivity {
+public class TypeThreeProjectile extends AppCompatActivity {
     EditText typeThreeProjectileHeight;
     EditText typeThreeProjectileVelocity;
     EditText typeThreeProjectileTime;
@@ -260,12 +254,12 @@ public class TypeThreeProjectile extends ActionBarActivity {
             }
         }
 
-        typeThreeProjectileHeight.setText(new Double(trim(h)).toString());
-        typeThreeProjectileVelocity.setText(new Double(trim(v)).toString());
-        typeThreeProjectileAngle.setText(new Double(trim(Math.toDegrees(a))).toString());
-        typeThreeProjectileMaxHeight.setText(new Double(trim(hm)).toString());
-        typeThreeProjectileTime.setText(new Double(trim(t)).toString());
-        typeThreeProjectileDistance.setText(new Double(trim(d)).toString());
+        typeThreeProjectileHeight.setText(Double.toString(trim(h)));
+        typeThreeProjectileVelocity.setText(Double.toString(trim(h)));
+        typeThreeProjectileAngle.setText(Double.toString(trim(Math.toDegrees(a))));
+        typeThreeProjectileMaxHeight.setText(Double.toString(trim(hm)));
+        typeThreeProjectileTime.setText(Double.toString(trim(t)));
+        typeThreeProjectileDistance.setText(Double.toString(trim(d)));
 
         if(!(Height&&Velocity&&Angle&&MaxHeight&&Time&&Distance)){
             typeThreeProjectileDistance.setText("ERROR");
@@ -280,17 +274,17 @@ public class TypeThreeProjectile extends ActionBarActivity {
 
     public void fillEmpty() {
         if (typeThreeProjectileDistance.getText().toString().isEmpty())
-            typeThreeProjectileDistance.setText(new Double(0).toString());
+            typeThreeProjectileDistance.setText(Double.toString(0));
         if (typeThreeProjectileTime.getText().toString().isEmpty())
-            typeThreeProjectileTime.setText(new Double(0).toString());
+            typeThreeProjectileTime.setText(Double.toString(0));
         if (typeThreeProjectileVelocity.getText().toString().isEmpty())
-            typeThreeProjectileVelocity.setText(new Double(0).toString());
+            typeThreeProjectileVelocity.setText(Double.toString(0));
         if (typeThreeProjectileMaxHeight.getText().toString().isEmpty())
-            typeThreeProjectileMaxHeight.setText(new Double(0).toString());
+            typeThreeProjectileMaxHeight.setText(Double.toString(0));
         if (typeThreeProjectileAngle.getText().toString().isEmpty())
-            typeThreeProjectileAngle.setText(new Double(0).toString());
+            typeThreeProjectileAngle.setText(Double.toString(0));
         if (typeThreeProjectileHeight.getText().toString().isEmpty())
-            typeThreeProjectileHeight.setText(new Double(0).toString());
+            typeThreeProjectileHeight.setText(Double.toString(0));
 
     }
 

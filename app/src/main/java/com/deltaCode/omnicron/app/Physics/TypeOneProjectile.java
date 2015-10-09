@@ -1,19 +1,20 @@
-package com.deltaCode.omnicron.app;
+package com.deltaCode.omnicron.app.Physics;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import com.deltaCode.omnicron.app.R;
 
 
-public class TypeOneProjectile extends ActionBarActivity {
+public class TypeOneProjectile extends AppCompatActivity {
     EditText typeOneProjectileHeight;
     EditText typeOneProjectileVelocity;
     EditText typeOneProjectileTime;
@@ -162,13 +163,13 @@ public class TypeOneProjectile extends ActionBarActivity {
 
     public void fillEmpty() {
         if (typeOneProjectileDistance.getText().toString().isEmpty())
-            typeOneProjectileDistance.setText(new Double(0).toString());
+            typeOneProjectileDistance.setText(Double.toString(0));
         if (typeOneProjectileTime.getText().toString().isEmpty())
-            typeOneProjectileTime.setText(new Double(0).toString());
+            typeOneProjectileTime.setText(Double.toString(0));
         if (typeOneProjectileVelocity.getText().toString().isEmpty())
-            typeOneProjectileVelocity.setText(new Double(0).toString());
+            typeOneProjectileVelocity.setText(Double.toString(0));
         if (typeOneProjectileHeight.getText().toString().isEmpty())
-            typeOneProjectileHeight.setText(new Double(0).toString());
+            typeOneProjectileHeight.setText(Double.toString(0));
     }
 
     public double round(double a) {

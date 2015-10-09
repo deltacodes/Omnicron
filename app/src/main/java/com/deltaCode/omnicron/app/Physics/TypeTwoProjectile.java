@@ -1,25 +1,20 @@
-package com.deltaCode.omnicron.app;
+package com.deltaCode.omnicron.app.Physics;
 
-import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import android.view.View;
 import android.widget.*;
 import android.content.*;
+import com.deltaCode.omnicron.app.R;
 
 
-public class TypeTwoProjectile extends ActionBarActivity {
+public class TypeTwoProjectile extends AppCompatActivity {
     EditText typeTwoProjectileMaxHeight;
     EditText typeTwoProjectileVelocity;
     EditText typeTwoProjectileTime;

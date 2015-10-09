@@ -17,24 +17,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".KinematicsHome"
+            android:name=".Physics.KinematicsHome"
             android:label="@string/title_activity_kinematics_home" >
         </activity>
         <activity
-            android:name=".TypeOneProjectile"
+            android:name=".Physics.TypeOneProjectile"
             android:label="@string/title_activity_type_one_projectile" >
         </activity>
         <activity
-            android:name=".TypeTwoProjectile"
+            android:name=".Physics.TypeTwoProjectile"
             android:label="@string/title_activity_type_two_projectile" >
         </activity>
         <activity
-            android:name=".TypeThreeProjectile"
+            android:name=".Physics.TypeThreeProjectile"
             android:label="@string/title_activity_type_three_projectile" >
         </activity>
         <activity
-            android:name=".Motion"
+            android:name=".Physics.Motion"
             android:label="@string/title_activity_motion" >
+        </activity>
+        <activity
+            android:name=".Physics.PhysicsHome"
+            android:label="@string/title_activity_physics_home" >
+        </activity>
+        <activity
+            android:name=".Chemistry.ChemistryHome"
+            android:label="@string/title_activity_chemistry_home" >
+        </activity>
+        <activity
+            android:name=".Chemistry.GasLaws"
+            android:label="@string/title_activity_gas_laws" >
         </activity>
     </application>
 
