@@ -17,5 +17,6 @@
     <string name="title_activity_type_two_projectile">TypeTwoProjectile</string>
     <string name="title_activity_type_three_projectile">TypeThreeProjectile</string>
     <string name="title_activity_kinematics">Kinematics</string>
+    <string name="title_activity_motion">Motion</string>
 
 </resources>
