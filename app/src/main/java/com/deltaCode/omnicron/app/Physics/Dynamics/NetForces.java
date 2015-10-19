@@ -34,6 +34,7 @@ public class NetForces extends ActionBarActivity {
     Button Calculate;
     Button Clear;
     Button Reset;
+    //hello
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
