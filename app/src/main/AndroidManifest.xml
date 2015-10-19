@@ -56,6 +56,10 @@
             android:name=".Physics.Dynamics.NetForces"
             android:label="@string/title_activity_net_forces" >
         </activity>
+        <activity
+            android:name=".Chemistry.hahaha"
+            android:label="@string/title_activity_hahaha" >
+        </activity>
     </application>
 
 </manifest>
