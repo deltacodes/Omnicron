@@ -18,7 +18,7 @@
             android:textSize="40dp"
             android:width="300dp"
             android:onClick="ToKinematicsFromHomeMethod"
-            android:id="@+id/ToPhysicsFromHome" android:layout_below="@+id/textView" android:layout_centerHorizontal="true"
+            android:id="@+id/ToKinematicsFromHome" android:layout_below="@+id/textView" android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"/>
     <Button
             android:layout_width="wrap_content"
@@ -26,7 +26,8 @@
             android:text="Dynamics"
             android:textSize="40dp"
             android:width="300dp"
-            android:id="@+id/ToChemistryFromHome" android:layout_below="@+id/ToPhysicsFromHome" android:layout_centerHorizontal="true"
+            android:onClick="ToDynamicsFromHomeMethod"
+            android:id="@+id/ToDynamicsFromHome" android:layout_below="@+id/ToKinematicsFromHome" android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>
     <Button
             android:layout_width="wrap_content"
@@ -34,7 +35,7 @@
             android:text="Energy"
             android:textSize="40dp"
             android:width="300dp"
-            android:id="@+id/ToKEnergyFromHome" android:layout_below="@+id/ToChemistryFromHome" android:layout_centerHorizontal="true"
+            android:id="@+id/ToEnergyFromHome" android:layout_below="@+id/ToDynamicsFromHome" android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

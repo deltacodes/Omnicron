@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.deltaCode.omnicron.app.Chemistry.ChemistryHome;
 import com.deltaCode.omnicron.app.Physics.PhysicsHome;
 
-import static com.deltaCode.omnicron.app.R.id.ToPhysicsFromHome;
+import static com.deltaCode.omnicron.app.R.id.ToKinematicsFromHome;
 
 public class MainActivity extends Activity {
 Button toKinematics;
@@ -16,7 +16,7 @@ Button toKinematics;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toKinematics=(Button)findViewById(ToPhysicsFromHome);
+        toKinematics=(Button)findViewById(ToKinematicsFromHome);
     }
     public void ToPhysicsFromHomeMethod (View view){
         Intent intent=new Intent(this,PhysicsHome.class);

@@ -6,9 +6,10 @@
     <TextView
             android:text="Omnicron"
             android:textSize="40dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:id="@+id/textView2"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,8 +17,9 @@
             android:textSize="40dp"
             android:width="300dp"
             android:onClick="ToPhysicsFromHomeMethod"
-            android:id="@+id/ToPhysicsFromHome" android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"/>
+            android:id="@+id/ToKinematicsFromHome"
+            android:layout_below="@+id/textView2" android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +27,8 @@
             android:textSize="40dp"
             android:width="300dp"
             android:onClick="ToChemistryFromHomeMethod"
-            android:id="@+id/ToChemistryFromHome" android:layout_below="@+id/ToPhysicsFromHome" android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+            android:id="@+id/ToDynamicsFromHome"
+            android:layout_below="@+id/ToKinematicsFromHome" android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
 
 </RelativeLayout>

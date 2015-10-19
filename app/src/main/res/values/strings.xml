@@ -21,5 +21,15 @@
     <string name="title_activity_physics_home">PhysicsHome</string>
     <string name="title_activity_chemistry_home">ChemistryHome</string>
     <string name="title_activity_gas_laws">GasLaws</string>
+    <string name="title_activity_dynamics_home">DynamicsHome</string>
+    <string name="title_activity_net_forces">NetForces</string>
+
+    <string-array name="Vector_Type">
+        <item>Choose a Type</item>
+        <item>Angle/Magnatude</item>
+        <item>Component</item>
+    </string-array>
+
+
 
 </resources>

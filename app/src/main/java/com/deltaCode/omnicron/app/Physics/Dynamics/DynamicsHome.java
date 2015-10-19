@@ -1,4 +1,4 @@
-package com.deltaCode.omnicron.app.Physics;
+package com.deltaCode.omnicron.app.Physics.Dynamics;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,24 +6,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import com.deltaCode.omnicron.app.Physics.Dynamics.DynamicsHome;
-import com.deltaCode.omnicron.app.Physics.Kinematics.KinematicsHome;
 import com.deltaCode.omnicron.app.R;
 
 
-public class PhysicsHome extends AppCompatActivity {
+public class DynamicsHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physics_home);
+        setContentView(R.layout.activity_dynamics_home);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_physics_home, menu);
+        getMenuInflater().inflate(R.menu.menu_kinematics_home, menu);
         return true;
     }
 
@@ -41,12 +39,10 @@ public class PhysicsHome extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void ToKinematicsFromHomeMethod (View view){
-        Intent intent=new Intent(this,KinematicsHome.class);
-        this.startActivity(intent);
+    public void ToNetForcesFromDynamcis(View view){
+        Intent intent=new Intent(this,NetForces.class);
+        startActivity(intent);
     }
-    public void ToDynamicsFromHomeMethod (View view){
-        Intent intent=new Intent(this,DynamicsHome.class);
-        this.startActivity(intent);
-    }
+
 }
+

@@ -1,8 +1,7 @@
-package com.deltaCode.omnicron.app.Physics;
+package com.deltaCode.omnicron.app.Physics.Kinematics;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -168,6 +167,11 @@ public class TypeThreeProjectile extends AppCompatActivity {
                     vyb = true;
                     vy=vx*Math.tan(a);
                 }
+                else if(Time&&MaxHeight){
+                    cont = true;
+                    vyb = true;
+                    vy=-1*t+Math.sqrt(t*t-(4)*(-1/19.6)*(hm-4.9*t*t))*-9.8;
+                }
             }
             if (!Angle) {
                 if (vyb && vxb) {
@@ -212,7 +216,7 @@ public class TypeThreeProjectile extends AppCompatActivity {
                 else if(Velocity&&Angle&&Height){
                     cont = true;
                     Distance = true;
-                    d=(((v*Math.cos(a))/9.8)*(v*Math.sin(a))+Math.sqrt(v*v*Math.sin(a)*Math.sin(a)+19.6*h));
+                    d=(((v*Math.cos(a))/9.8)*(-1*v*Math.sin(a))+Math.sqrt(v*v*Math.sin(a)*Math.sin(a)+19.6*h));
                 }
             }
             if (!Velocity) {
@@ -242,24 +246,19 @@ public class TypeThreeProjectile extends AppCompatActivity {
                 else if (vyb && MaxHeight) {
                     cont = true;
                     Height = true;
-                    h = hm - ((vy * vy) / 4.9);
+                    h = hm - ((vy * vy) / 19.6);
                 }
             }
             if (!MaxHeight) {
                 if (vyb && Height) {
                     cont = true;
                     MaxHeight = true;
-                    hm = h + ((vy * vy) / 4.9);
+                    hm = h + ((vy * vy) / 19.6);
                 }
             }
         }
 
-        typeThreeProjectileHeight.setText(Double.toString(trim(h)));
-        typeThreeProjectileVelocity.setText(Double.toString(trim(h)));
-        typeThreeProjectileAngle.setText(Double.toString(trim(Math.toDegrees(a))));
-        typeThreeProjectileMaxHeight.setText(Double.toString(trim(hm)));
-        typeThreeProjectileTime.setText(Double.toString(trim(t)));
-        typeThreeProjectileDistance.setText(Double.toString(trim(d)));
+
 
         if(!(Height&&Velocity&&Angle&&MaxHeight&&Time&&Distance)){
             typeThreeProjectileDistance.setText("ERROR");
@@ -268,6 +267,14 @@ public class TypeThreeProjectile extends AppCompatActivity {
             typeThreeProjectileVelocity.setText("ERROR");
             typeThreeProjectileAngle.setText("ERROR");
             typeThreeProjectileHeight.setText("ERROR");
+        }
+        else{
+            typeThreeProjectileHeight.setText(Double.toString(trim(h)));
+            typeThreeProjectileVelocity.setText(Double.toString(trim(v)));
+            typeThreeProjectileAngle.setText(Double.toString(trim(Math.toDegrees(a))));
+            typeThreeProjectileMaxHeight.setText(Double.toString(trim(hm)));
+            typeThreeProjectileTime.setText(Double.toString(trim(t)));
+            typeThreeProjectileDistance.setText(Double.toString(trim(d)));
         }
     }
 

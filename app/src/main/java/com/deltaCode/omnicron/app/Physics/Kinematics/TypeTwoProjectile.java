@@ -1,7 +1,6 @@
-package com.deltaCode.omnicron.app.Physics;
+package com.deltaCode.omnicron.app.Physics.Kinematics;
 
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;

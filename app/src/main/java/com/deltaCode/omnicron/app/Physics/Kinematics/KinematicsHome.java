@@ -1,4 +1,4 @@
-package com.deltaCode.omnicron.app.Physics;
+package com.deltaCode.omnicron.app.Physics.Kinematics;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.deltaCode.omnicron.app.Physics.Dynamics.NetForces" >
+
+    <TextView
+            android:text="Net Forces"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:layout_height="wrap_content" android:id="@+id/NetForcesTitle"/>
+    <Spinner
+            android:entries="@array/projectile_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner4" android:layout_below="@+id/NetForcesTitle"
+            android:layout_toLeftOf="@+id/NetForcesTitle" android:layout_toStartOf="@+id/NetForcesTitle"/>
+    <Spinner
+            android:entries="@array/projectile_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5" android:layout_below="@+id/spinner4" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner4"
+            android:layout_alignEnd="@+id/spinner4"/>
+    <Spinner
+            android:entries="@array/projectile_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner6" android:layout_below="@+id/spinner5" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner5"
+            android:layout_alignEnd="@+id/spinner5"/>
+    <Spinner
+            android:entries="@array/projectile_array"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner7" android:layout_below="@+id/spinner6" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner6"
+            android:layout_alignEnd="@+id/spinner6"/>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/button" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+                        android:ems="10" android:id="@+id/Vector1.1"
+                        android:width="125dp"
+                        android:layout_below="@+id/NetForcesTitle" android:layout_toRightOf="@+id/spinner4"
+                        android:layout_toEndOf="@+id/spinner4"/>
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector1.2"
+              android:width="125dp"
+              android:layout_below="@+id/NetForcesTitle" android:layout_alignParentRight="true"
+            />
+
+
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector2.1"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector1.1" android:layout_toRightOf="@+id/spinner5"
+              android:layout_toEndOf="@+id/spinner5"/>
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector2.2"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector1.1" android:layout_alignParentRight="true"
+            />
+
+
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector3.1"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector2.1" android:layout_toRightOf="@+id/spinner6"
+              android:layout_toEndOf="@+id/spinner6"/>
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector3.2"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector2.1" android:layout_alignParentRight="true"
+            />
+
+
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector4.1"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector3.1" android:layout_toRightOf="@+id/spinner7"
+              android:layout_toEndOf="@+id/spinner7"/>
+
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
+              android:ems="10" android:id="@+id/Vector4.2"
+              android:width="125dp"
+              android:layout_marginTop="35dp"
+              android:layout_below="@+id/Vector3.1" android:layout_alignParentRight="true"
+            />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/add1"
+            android:layout_below="@+id/Vector1.2" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/add2"
+            android:layout_below="@+id/Vector2.2" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/add3"
+            android:layout_below="@+id/Vector3.2" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
