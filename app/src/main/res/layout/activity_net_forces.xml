@@ -24,21 +24,24 @@
             android:entries="@array/projectile_array"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner5" android:layout_below="@+id/spinner4" android:layout_alignParentLeft="true"
+            android:id="@+id/spinner5"
+            android:layout_alignTop="@+id/Vector2.1" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner4"
             android:layout_alignEnd="@+id/spinner4"/>
     <Spinner
             android:entries="@array/projectile_array"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner6" android:layout_below="@+id/spinner5" android:layout_alignParentLeft="true"
+            android:id="@+id/spinner6"
+            android:layout_alignTop="@+id/Vector3.1" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner5"
             android:layout_alignEnd="@+id/spinner5"/>
     <Spinner
             android:entries="@array/projectile_array"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner7" android:layout_below="@+id/spinner6" android:layout_alignParentLeft="true"
+            android:id="@+id/spinner7"
+            android:layout_alignTop="@+id/Vector4.1" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_alignRight="@+id/spinner6"
             android:layout_alignEnd="@+id/spinner6"/>
 

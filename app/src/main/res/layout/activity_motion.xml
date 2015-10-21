@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velocity I"
+            android:textSize="30sp"
+            android:id="@+id/MotionVelocityILbl"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velocity F"
+            android:textSize="30sp"
+            android:id="@+id/MotionVelocityFLbl"
+            android:layout_alignTop="@id/MotionVelocityILbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="30sp"
+            android:id="@+id/MotionTimeLbl"
+            android:layout_alignTop="@id/MotionVelocityFLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance(X)"
+            android:textSize="30sp"
+            android:id="@+id/MotionDistanceLbl"
+            android:layout_alignTop="@id/MotionTimeLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Height"
+            android:textSize="30sp"
+            android:id="@+id/MotionAccelerationLbl"
+            android:layout_alignTop="@id/MotionDistanceLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_button"
+            android:text="Calculate!"
+            android:id="@+id/MotionCalculate"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:width="350dp"
+            android:onClick="calculate"
+            android:layout_marginBottom="15dp" />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear!"
+            android:background="@drawable/corner_button"
+            android:id="@+id/MotionClear"
+            android:layout_alignBottom="@id/MotionCalculate"
+            android:layout_alignParentRight="true"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:onClick="clear"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="7dp"
+
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced"
+            android:id="@+id/MotionAdvanceCalculate"
+            android:layout_alignBottom="@id/MotionCalculate"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/corner_button"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="7dp"
+
+            />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/MotionVelocityI"
+            android:layout_alignTop="@id/MotionVelocityILbl"
+            android:layout_alignLeft="@+id/MotionClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/MotionVelocityF"
+            android:layout_alignTop="@id/MotionVelocityFLbl"
+            android:layout_alignLeft="@+id/MotionClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/MotionTime"
+            android:layout_alignTop="@id/MotionTimeLbl"
+            android:layout_alignLeft="@+id/MotionClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/MotionDistance"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@id/MotionDistanceLbl"
+            android:layout_alignLeft="@+id/MotionClear" />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/MotionAcceleration"
+            android:layout_alignTop="@id/MotionAccelerationLbl"
+            android:layout_marginLeft="10dp"
+            android:layout_alignLeft="@+id/MotionClear" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Motion"
+            android:textSize="30dp"
+            android:id="@+id/MotionLbl" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
