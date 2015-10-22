@@ -53,7 +53,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Max Height"
+            android:text="Acceleration"
             android:textSize="30sp"
             android:id="@+id/MotionAccelerationLbl"
             android:layout_alignTop="@id/MotionDistanceLbl"
@@ -112,7 +112,7 @@
             android:ems="10"
             android:id="@+id/MotionVelocityI"
             android:layout_alignTop="@id/MotionVelocityILbl"
-            android:layout_alignLeft="@+id/MotionClear" />
+            android:layout_alignLeft="@+id/MotionDistance" android:layout_alignStart="@+id/MotionDistance"/>
 
     <EditText
             android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
             android:ems="10"
             android:id="@+id/MotionVelocityF"
             android:layout_alignTop="@id/MotionVelocityFLbl"
-            android:layout_alignLeft="@+id/MotionClear" />
+            android:layout_alignLeft="@+id/MotionVelocityI" android:layout_alignStart="@+id/MotionVelocityI"/>
 
     <EditText
             android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
             android:ems="10"
             android:id="@+id/MotionTime"
             android:layout_alignTop="@id/MotionTimeLbl"
-            android:layout_alignLeft="@+id/MotionClear" />
+            android:layout_alignLeft="@+id/MotionVelocityF" android:layout_alignStart="@+id/MotionVelocityF"/>
 
     <EditText
             android:layout_width="wrap_content"
@@ -138,9 +138,8 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/MotionDistance"
-            android:layout_marginLeft="10dp"
             android:layout_alignTop="@id/MotionDistanceLbl"
-            android:layout_alignLeft="@+id/MotionClear" />
+            android:layout_alignLeft="@+id/MotionAcceleration" android:layout_alignStart="@+id/MotionAcceleration"/>
 
     <EditText
             android:layout_width="wrap_content"
@@ -149,8 +148,7 @@
             android:ems="10"
             android:id="@+id/MotionAcceleration"
             android:layout_alignTop="@id/MotionAccelerationLbl"
-            android:layout_marginLeft="10dp"
-            android:layout_alignLeft="@+id/MotionClear" />
+            android:layout_toRightOf="@+id/MotionLbl" android:layout_toEndOf="@+id/MotionLbl"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

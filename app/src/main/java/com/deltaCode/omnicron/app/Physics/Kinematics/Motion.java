@@ -73,89 +73,96 @@ public class Motion extends ActionBarActivity {
         boolean cont = true;
         while (cont) {
             cont = false;
-            if(!Distance){
-                if(VelocityI&&Time&&Acceleration){
-                    cont=true;
-                    Distance=true;
-                    d=vi*t+0.5*a*t*t;
-                }
-                else if(VelocityF&&VelocityI&&Time){
-                    cont=true;
-                    Distance=true;
-                    d=(vf+vi)/2*t;
-                }
-                else if(VelocityF&&VelocityI&&Acceleration){
-                    cont=true;
-                    Distance=true;
-                    d=(vf*vf-vi*vi)/(2*a);
+            if (!Distance) {
+                if (VelocityI && Time && Acceleration) {
+                    cont = true;
+                    Distance = true;
+                    d = vi * t + 0.5 * a * t * t;
+                } else if (VelocityF && VelocityI && Time) {
+                    cont = true;
+                    Distance = true;
+                    d = (vf + vi) / 2 * t;
+                } else if (VelocityF && VelocityI && Acceleration) {
+                    cont = true;
+                    Distance = true;
+                    d = (vf * vf - vi * vi) / (2 * a);
                 }
             }
-            if(!Acceleration){
-                if(VelocityF&&VelocityI&&Time){
-                    cont=true;
-                    Acceleration=true;
-                    a=(vf-vi)/t;
-                }
-                else if(VelocityF&&VelocityI&&Distance){
-                    cont=true;
-                    Acceleration=true;
-                    a=(vf*vf-vi*vi)/(2*d);
-                }
-                else if(Time&&Distance&&VelocityI){
-                    cont=true;
-                    Acceleration=true;
-                    a=d-(vi*t)/(0.5*t*t);
+            if (!Acceleration) {
+                if (VelocityF && VelocityI && Time) {
+                    cont = true;
+                    Acceleration = true;
+                    a = (vf - vi) / t;
+                } else if (VelocityF && VelocityI && Distance) {
+                    cont = true;
+                    Acceleration = true;
+                    a = (vf * vf - vi * vi) / (2 * d);
+                } else if (Time && Distance && VelocityI) {
+                    cont = true;
+                    Acceleration = true;
+                    a = d - (vi * t) / (0.5 * t * t);
                 }
 
             }
-            if(!Time){
-                if(VelocityF&&VelocityI&&Acceleration){
-                    cont=true;
-                    Time=true;
-                    t=(vf-vi)/t;
-                }
-                else if(VelocityI&&Distance&&Acceleration){
-                    cont=true;
-                    Time=true;
-                    t=(-vi+Math.sqrt(vi*vi-(4)*(0.5*a)*(-d)))/a;
+            if (!Time) {
+                if (VelocityF && VelocityI && Acceleration) {
+                    cont = true;
+                    Time = true;
+                    t = (vf - vi) / t;
+                } else if (VelocityI && Distance && Acceleration) {
+                    cont = true;
+                    Time = true;
+                    t = (-vi + Math.sqrt(vi * vi - (4) * (0.5 * a) * (-d))) / a;
                 }
             }
-            if(!VelocityF){
-                if(VelocityF&&Acceleration&&Time){
-                    cont=true;
-                    VelocityF=true;
-                    vf=vi+a*t;
+            if (!VelocityF) {
+                if (VelocityF && Acceleration && Time) {
+                    cont = true;
+                    VelocityF = true;
+                    vf = vi + a * t;
 
-                }
-                else if(VelocityI&&Distance&&Acceleration){
-                    cont=true;
-                    VelocityF=true;
-                    vf=Math.sqrt(vi*vi+2*a*t);
-                }
-                else if(Distance&&VelocityI&&Time)
-                    cont=true;
-                VelocityF=true;
-                vf=d/t*2-vi;
+                } else if (VelocityI && Distance && Acceleration) {
+                    cont = true;
+                    VelocityF = true;
+                    vf = Math.sqrt(vi * vi + 2 * a * t);
+                } else if (Distance && VelocityI && Time)
+                    cont = true;
+                VelocityF = true;
+                vf = d / t * 2 - vi;
             }
-            if(!VelocityI){
-                if(VelocityI&&Acceleration&&Time){
-                    cont=true;
-                    VelocityI=true;
-                    vi=vf-a*t;
+            if (!VelocityI) {
+                if (VelocityI && Acceleration && Time) {
+                    cont = true;
+                    VelocityI = true;
+                    vi = vf - a * t;
 
+                } else if (VelocityI && Distance && Acceleration) {
+                    cont = true;
+                    VelocityI = true;
+                    vi = Math.sqrt(vf * vf - 2 * a * t);
+                } else if (Distance && VelocityI && Time) {
+                    cont = true;
+                    VelocityI = true;
+                    vi = vf - (d / t * 2);
                 }
-                else if(VelocityI&&Distance&&Acceleration){
-                    cont=true;
-                    VelocityI=true;
-                    vi=Math.sqrt(vf*vf-2*a*t);
-                }
-                else if(Distance&&VelocityI&&Time)
-                    cont=true;
-                VelocityI=true;
-                vi=vf-(d/t*2);
+            }
+        }
+            if(!(Distance&&VelocityI&&Acceleration&&VelocityF&&Time&&Distance)){
+                MotionDistance.setText("ERROR");
+                MotionVelocityF.setText("ERROR");
+                MotionTime.setText("ERROR");
+                MotionVelocityI.setText("ERROR");
+                MotionAcceleration.setText("ERROR");
+            }
+            else{
+                MotionVelocityF.setText(Double.toString(trim(vf)));
+                MotionVelocityI.setText(Double.toString(trim(vi)));
+                MotionAcceleration.setText(Double.toString(trim(a)));
+                MotionTime.setText(Double.toString(trim(t)));
+                MotionDistance.setText(Double.toString(trim(d)));
             }
 
-            }
+
 
         }
 
@@ -173,7 +180,7 @@ public class Motion extends ActionBarActivity {
             MotionAcceleration.setText(Double.toString(0));
     }
 
-    public double round(double a) {
+    public double trim(double a) {
         return Math.floor(a * 1000) / 1000;
     }
 

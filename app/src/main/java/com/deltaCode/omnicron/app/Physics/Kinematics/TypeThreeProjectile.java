@@ -170,7 +170,7 @@ public class TypeThreeProjectile extends AppCompatActivity {
                 else if(Time&&MaxHeight){
                     cont = true;
                     vyb = true;
-                    vy=-1*t+Math.sqrt(t*t-(4)*(-1/19.6)*(hm-4.9*t*t))*-9.8;
+                    vy=(t-Math.sqrt(t*t-(4)*(1/19.6)*(4.9*t*t-hm)))*9.8;
                 }
             }
             if (!Angle) {
