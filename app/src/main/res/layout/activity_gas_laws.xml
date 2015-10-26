@@ -9,8 +9,134 @@
                 tools:context="com.deltaCode.omnicron.app.Chemistry.GasLaws">
 
     <TextView
-            android:text="@string/hello_world"
+            android:text="Gas Laws"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:layout_height="wrap_content" android:id="@+id/GasLawsTitle"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            android:textSize="30sp"
+            android:id="@+id/pressureLbl"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="5dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume"
+            android:textSize="30sp"
+            android:id="@+id/volumeLbl"
+            android:layout_alignTop="@id/pressureLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp"
+            />
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="# moles"
+            android:textSize="30sp"
+            android:id="@+id/molesLbl"
+            android:layout_alignTop="@id/volumeLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:textSize="30sp"
+            android:id="@+id/temperatureLbl"
+            android:layout_alignTop="@id/molesLbl"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate!"
+            android:background="@drawable/corner_button"
+            android:id="@+id/GasLawsCalculate"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:width="350dp"
+            android:onClick="calculate"
+            android:layout_marginBottom="15dp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear!"
+            android:background="@drawable/corner_button"
+            android:id="@+id/GasLawsClear"
+            android:layout_alignBottom="@id/GasLawsCalculate"
+            android:layout_alignParentRight="true"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:onClick="clear"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="6dp"
+
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_button"
+            android:text="Advanced"
+            android:id="@+id/GasLawsAdvanced"
+            android:layout_alignBottom="@id/GasLawsCalculate"
+            android:layout_alignParentLeft="true"
+            android:textSize="30sp"
+            android:width="170dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="6dp"
+
+            />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/pressuretext"
+            android:layout_alignTop="@id/pressureLbl"
+            android:layout_alignLeft="@+id/GasLawsClear"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/volumetext"
+            android:layout_alignTop="@id/volumeLbl"
+            android:layout_alignLeft="@+id/GasLawsClear"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/molestext"
+            android:layout_alignTop="@id/molesLbl"
+            android:layout_alignLeft="@+id/GasLawsClear"/>
+
+    <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/temperaturetext"
+            android:layout_alignTop="@id/temperatureLbl"
+            android:layout_alignParentRight="true"/>
 </RelativeLayout>

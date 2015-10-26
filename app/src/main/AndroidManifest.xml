@@ -57,8 +57,12 @@
             android:label="@string/title_activity_net_forces" >
         </activity>
         <activity
-            android:name=".Chemistry.hahaha"
-            android:label="@string/title_activity_hahaha" >
+            android:name=".Chemistry.PeriodicTable"
+            android:label="@string/title_activity_periodic_table" >
+        </activity>
+        <activity
+            android:name=".Chemistry.UnitConverter"
+            android:label="@string/title_activity_unit_converter" >
         </activity>
     </application>
 
