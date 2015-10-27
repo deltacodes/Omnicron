@@ -1,30 +1,24 @@
 package com.deltaCode.omnicron.app.Chemistry;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import com.deltaCode.omnicron.app.Physics.Dynamics.NetForces;
-import com.deltaCode.omnicron.app.Physics.Kinematics.TypeOneProjectile;
 import com.deltaCode.omnicron.app.R;
 
-
-public class ChemistryHome extends AppCompatActivity {
+public class PeriodicTable extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chemistry_home);
+        setContentView(R.layout.activity_periodic_table);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_chemistry_home, menu);
+        getMenuInflater().inflate(R.menu.menu_periodic_table, menu);
         return true;
     }
 
@@ -41,18 +35,5 @@ public class ChemistryHome extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void ToGasLawsFromChemistry(View view){
-        Intent intent=new Intent(this,GasLaws.class);
-        startActivity(intent);
-    }
-    public void ToTableFromChemistry(View view){
-        Intent intent=new Intent(this,PeriodicTable.class);
-        startActivity(intent);
-    }
-    public void ToConverterFromChemistry(View view) {
-        Intent intent = new Intent(this, UnitConverter.class);
-        startActivity(intent);
     }
 }

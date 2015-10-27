@@ -30,6 +30,8 @@
         <item>Component</item>
     </string-array>
     <string name="title_activity_hahaha">hahaha</string>
+    <string name="title_activity_periodic_table">PeriodicTable</string>
+    <string name="title_activity_unit_converter">UnitConverter</string>
 
 
 
