@@ -1,5 +1,6 @@
 package com.deltaCode.omnicron.app.Physics.Dynamics;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import com.deltaCode.omnicron.app.Chemistry.ChemistryHome;
+import com.deltaCode.omnicron.app.Physics.PhysicsHome;
 import com.deltaCode.omnicron.app.R;
 
 public class NetForces extends ActionBarActivity {
@@ -34,6 +37,7 @@ public class NetForces extends ActionBarActivity {
     Button Calculate;
     Button Clear;
     Button Reset;
+
     //hello
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,14 +59,28 @@ public class NetForces extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.action_toPhysicsHome:
+                // EITHER CALL THE METHOD HERE OR DO THE FUNCTION DIRECTLY
+                ToPhysics();
+                return true;
+            case R.id.action_toChemistryHome:
+                // EITHER CALL THE METHOD HERE OR DO THE FUNCTION DIRECTLY
+                ToChemistry();
+                return true;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
+    public void ToPhysics() {
+        Intent intent = new Intent(this, PhysicsHome.class);
+        startActivity(intent);
+    }
+
+    public void ToChemistry() {
+        Intent intent = new Intent(this, ChemistryHome.class);
+        startActivity(intent);
+    }
 }
