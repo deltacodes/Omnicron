@@ -25,7 +25,6 @@
     <string name="title_activity_net_forces">NetForces</string>
 
     <string-array name="Vector_Type">
-        <item>Choose a Type</item>
         <item>Angle/Magnatude</item>
         <item>Component</item>
     </string-array>
