@@ -43,7 +43,7 @@ public class ChemistryHome extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void ToGasLawsFromChemistry(View view){
+    public void ToGasLawsFromChemistry (View view){
         Intent intent=new Intent(this,GasLaws.class);
         startActivity(intent);
     }

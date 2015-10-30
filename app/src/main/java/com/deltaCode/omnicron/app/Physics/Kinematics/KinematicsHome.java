@@ -43,8 +43,6 @@ public class KinematicsHome extends AppCompatActivity {
         Intent intent=new Intent(this,TypeOneProjectile.class);
         startActivity(intent);
     }
-    public void ToMotionFromKinematics(View view){
-        Intent intent=new Intent(this,Motion.class);
-        startActivity(intent);
+
     }
-}
+
