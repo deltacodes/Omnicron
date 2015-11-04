@@ -16,7 +16,7 @@ import com.deltaCode.omnicron.app.R;
 public class GasLaws extends AppCompatActivity {
     EditText pressuretext;
     EditText volumetext;
-    EditText molestext;
+    EditText molestext; 
     EditText temperaturetext;
     private final double r = 0.08206;
 
