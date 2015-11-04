@@ -20,6 +20,7 @@ public class NetForces extends ActionBarActivity {
     Spinner VectorSpinner3;
     Spinner VectorSpinner4;
     Spinner VectorSpinnerAnswer;
+    Spinner VectorSpinnerCalc;
 
     EditText Vector1_1;
     EditText Vector1_2;
@@ -49,6 +50,7 @@ public class NetForces extends ActionBarActivity {
     boolean Spinner3=false;
     boolean Spinner4=false;
     boolean answerSpinner=false;
+    int calcSpinner=0;
 
     //hello
     @Override
@@ -60,6 +62,7 @@ public class NetForces extends ActionBarActivity {
         VectorSpinner3=(Spinner)findViewById(R.id.VectorSpinner3);
         VectorSpinner4=(Spinner)findViewById(R.id.VectorSpinner4);
         VectorSpinnerAnswer=(Spinner)findViewById(R.id.AnswerSpinner);
+        VectorSpinnerCalc=(Spinner)findViewById(R.id.SpinnerCalc);
 
         Vector1_1=(EditText)findViewById(R.id.Vector1_1);
         Vector1_2=(EditText)findViewById(R.id.Vector1_2);
@@ -106,9 +109,13 @@ public class NetForces extends ActionBarActivity {
                 switch (position) {
                     case 0:
                         Spinner1=false;
+                        Vector1_1.setHint("Magnitude");
+                        Vector1_2.setHint("Angle");
                         break;
                     case 1:
                         Spinner1=true;
+                        Vector1_1.setHint("X Component");
+                        Vector1_2.setHint("Y Component");
                         break;
                 }
             }
@@ -122,9 +129,13 @@ public class NetForces extends ActionBarActivity {
                 switch (position) {
                     case 0:
                         Spinner2=false;
+                        Vector2_1.setHint("Magnitude");
+                        Vector2_2.setHint("Angle");
                         break;
                     case 1:
                         Spinner2=true;
+                        Vector2_1.setHint("X Component");
+                        Vector2_2.setHint("Y Component");
                         break;
                 }
             }
@@ -138,9 +149,13 @@ public class NetForces extends ActionBarActivity {
                 switch (position) {
                     case 0:
                         Spinner3=false;
+                        Vector3_1.setHint("Magnitude");
+                        Vector3_2.setHint("Angle");
                         break;
                     case 1:
                         Spinner3=true;
+                        Vector3_1.setHint("X Component");
+                        Vector3_2.setHint("Y Component");
                         break;
                 }
             }
@@ -154,9 +169,13 @@ public class NetForces extends ActionBarActivity {
                 switch (position) {
                     case 0:
                         Spinner4=false;
+                        Vector4_1.setHint("Magnitude");
+                        Vector4_2.setHint("Angle");
                         break;
                     case 1:
                         Spinner4=true;
+                        Vector4_1.setHint("X Component");
+                        Vector4_2.setHint("Y Component");
                         break;
                 }
             }
@@ -180,6 +199,24 @@ public class NetForces extends ActionBarActivity {
             public void onNothingSelected(AdapterView<?> arg0) {
             }});
 
+        VectorSpinnerCalc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View view, int position, long row_id) {
+                switch (position) {
+                    case 0:
+                        calcSpinner=0;
+                        break;
+                    case 1:
+                        calcSpinner=1;
+                        break;
+                    case 2:
+                        calcSpinner=2;
+                        break;
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }});
 
 
 
@@ -276,11 +313,6 @@ public class NetForces extends ActionBarActivity {
 
 
 
-
-
-
-
-
     public void ToPhysics() {
         Intent intent = new Intent(this, PhysicsHome.class);
         startActivity(intent);
@@ -290,51 +322,80 @@ public class NetForces extends ActionBarActivity {
         Intent intent = new Intent(this, ChemistryHome.class);
         startActivity(intent);
     }
-    public void MotionCalculate(View view){
+
+
+
+
+
+    public void VectorCalculate(View view){
+        if(calcSpinner==0)
+            addCaculate();
+        if(calcSpinner==1)
+            dotCalculate();
+        if(calcSpinner==2)
+            crossCalculate();
+    }
+
+
+
+
+
+
+    public void addCaculate(){
         double xTotal=0;
         double yTotal=0;
         fillEmpty();
-        if(Spinner1){
-            xTotal+=new Double(Vector1_1.getText().toString());
-            yTotal+=new Double(Vector1_2.getText().toString());
+        Vector vector1 = new Vector (Spinner1, new Double(Vector1_1.getText().toString()), new Double(Vector1_2.getText().toString()));
+        Vector vector2 = new Vector (Spinner2, new Double(Vector2_1.getText().toString()), new Double(Vector2_2.getText().toString()));
+        Vector vector3 = new Vector (Spinner3, new Double(Vector3_1.getText().toString()), new Double(Vector3_2.getText().toString()));
+        Vector vector4 = new Vector (Spinner4, new Double(Vector4_1.getText().toString()), new Double(Vector4_2.getText().toString()));
+        xTotal = vector1.getComponentX()+vector2.getComponentX()+vector3.getComponentX()+vector4.getComponentX();
+        yTotal = vector1.getComponentY()+vector2.getComponentY()+vector3.getComponentY()+vector4.getComponentY();
+        if(answerSpinner){
+            xTotal=round(xTotal);
+            yTotal=round(yTotal);
+            String answer = xTotal + "I" + "\n" + yTotal + "J";
+            Answer.setText(answer);
         }
         else{
-            double magnitude= new Double(Vector1_1.getText().toString());
-            double angle= Math.toRadians(new Double(Vector1_2.getText().toString()));
-            xTotal+=magnitude*Math.cos(angle);
-            yTotal+=magnitude*Math.sin(angle);
+            double angle=Math.atan((yTotal/xTotal));
+            angle=Math.toDegrees(angle);
+            angle=round(angle);
+            double magnitude = Math.sqrt(xTotal*xTotal+yTotal*yTotal);
+            magnitude=round(magnitude);
+            String answer = "Magnitude: "+ magnitude + "\n Angle: " + angle;
+            Answer.setText(answer);
         }
-        if(Spinner2){
-            xTotal+=new Double(Vector2_1.getText().toString());
-            yTotal+=new Double(Vector2_2.getText().toString());
-        }
-        else{
-            double magnitude= new Double(Vector2_1.getText().toString());
-            double angle= Math.toRadians(new Double(Vector2_2.getText().toString()));
-            xTotal+=magnitude*Math.cos(angle);
-            yTotal+=magnitude*Math.sin(angle);
-        }
-        if(Spinner3){
-            xTotal+=new Double(Vector3_1.getText().toString());
-            yTotal+=new Double(Vector3_2.getText().toString());
-        }
-        else{
-            double magnitude= new Double(Vector3_1.getText().toString());
-            double angle= Math.toRadians(new Double(Vector3_2.getText().toString()));
-            xTotal+=magnitude*Math.cos(angle);
-            yTotal+=magnitude*Math.sin(angle);
-        }
-        if(Spinner4){
-            xTotal+=new Double(Vector4_1.getText().toString());
-            yTotal+=new Double(Vector4_2.getText().toString());
-        }
-        else{
-            double magnitude= new Double(Vector4_1.getText().toString());
-            double angle= Math.toRadians(new Double(Vector4_2.getText().toString()));
-            xTotal+=magnitude*Math.cos(angle);
-            yTotal+=magnitude*Math.sin(angle);
-        }
+        if(!Vector2_1.isShown())
+            Vector2_1.setText("");
+        if(!Vector2_2.isShown())
+            Vector2_2.setText("");
+        if(!Vector3_1.isShown())
+            Vector3_1.setText("");
+        if(!Vector3_2.isShown())
+            Vector3_2.setText("");
+        if(!Vector4_1.isShown())
+            Vector4_1.setText("");
+        if(!Vector4_2.isShown())
+            Vector4_2.setText("");
 
+
+
+    }
+
+
+
+
+
+
+
+    public void dotCalculate(){
+        double xTotal=0;
+        double yTotal=0;
+        Vector vector1 = new Vector (Spinner1, new Double(Vector1_1.getText().toString()), new Double(Vector1_2.getText().toString()));
+        Vector vector2 = new Vector (Spinner2, new Double(Vector2_1.getText().toString()), new Double(Vector2_2.getText().toString()));
+        xTotal=vector1.getComponentX()*vector2.getComponentX();
+        yTotal = vector1.getComponentY()*vector2.getComponentY();
 
         if(answerSpinner){
             xTotal=round(xTotal);
@@ -351,9 +412,49 @@ public class NetForces extends ActionBarActivity {
             String answer = "Magnitude: "+ magnitude + "\n Angle: " + angle;
             Answer.setText(answer);
         }
+        if(!Vector2_1.isShown())
+            Vector2_1.setText("");
+        if(!Vector2_2.isShown())
+            Vector2_2.setText("");
+        if(!Vector3_1.isShown())
+            Vector3_1.setText("");
+        if(!Vector3_2.isShown())
+            Vector3_2.setText("");
+        if(!Vector4_1.isShown())
+            Vector4_1.setText("");
+        if(!Vector4_2.isShown())
+            Vector4_2.setText("");
+
+
 
 
     }
+
+
+
+
+
+
+
+    public void crossCalculate(){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void fillEmpty() {
         if (Vector1_1.getText().toString().isEmpty())
             Vector1_1.setText(Double.toString(0));

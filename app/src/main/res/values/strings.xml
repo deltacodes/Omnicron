@@ -28,6 +28,13 @@
         <item>Angle/Magnatude</item>
         <item>Component</item>
     </string-array>
+
+    <string-array name="VectorCalc">
+        <item>Adding Vectors</item>
+        <item>Dot Products</item>
+        <item>Cross Products</item>
+    </string-array>
+
     <string name="title_activity_hahaha">hahaha</string>
     <string name="title_activity_periodic_table">PeriodicTable</string>
     <string name="title_activity_unit_converter">UnitConverter</string>

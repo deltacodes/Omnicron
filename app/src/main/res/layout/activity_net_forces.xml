@@ -13,13 +13,14 @@
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
             android:textSize="40dp"
-            android:layout_height="wrap_content" android:id="@+id/NetForcesTitle"/>
+            android:visibility="invisible"
+            android:layout_height="wrap_content" android:id="@+id/VectorCalcS"/>
     <Spinner
             android:entries="@array/Vector_Type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/VectorSpinner1" android:layout_below="@+id/NetForcesTitle"
-            android:layout_toLeftOf="@+id/NetForcesTitle" android:layout_toStartOf="@+id/NetForcesTitle"/>
+            android:id="@+id/VectorSpinner1" android:layout_below="@+id/VectorCalcS"
+            android:layout_toLeftOf="@+id/VectorCalcS" android:layout_toStartOf="@+id/VectorCalcS"/>
     <Spinner
             android:entries="@array/Vector_Type"
             android:layout_width="wrap_content"
@@ -50,8 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculate"
-            android:onClick="MotionCalculate"
-            android:id="@+id/MotionCalculate" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:onClick="VectorCalculate"
+            android:id="@+id/VectorCalculate" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
 
@@ -59,13 +60,14 @@
     <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
                         android:ems="10" android:id="@+id/Vector1.1"
                         android:width="125dp"
-                        android:layout_below="@+id/NetForcesTitle" android:layout_toRightOf="@+id/VectorSpinner1"
-                        android:layout_toEndOf="@+id/VectorSpinner1"/>
+                        android:layout_below="@+id/VectorCalcS" android:layout_toRightOf="@+id/VectorSpinner1"
+                        android:layout_toEndOf="@+id/VectorSpinner1"
+            />
 
     <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="numberDecimal"
               android:ems="10" android:id="@+id/Vector1.2"
               android:width="125dp"
-              android:layout_below="@+id/NetForcesTitle" android:layout_alignParentRight="true"
+              android:layout_below="@+id/VectorCalcS" android:layout_alignParentRight="true"
             />
 
 
@@ -160,7 +162,7 @@
             android:layout_alignEnd="@+id/Vector4.1"/>
     <Spinner android:entries="@array/Vector_Type" android:layout_width="wrap_content"
              android:layout_height="wrap_content" android:id="@+id/AnswerSpinner"
-             android:layout_above="@+id/MotionCalculate" android:layout_alignParentLeft="true"
+             android:layout_alignTop="@+id/AnswerTextView" android:layout_alignParentLeft="true"
              android:layout_alignParentStart="true" android:layout_alignRight="@+id/VectorSpinner4"
              android:layout_alignEnd="@+id/VectorSpinner4"/>
     <TextView
@@ -178,6 +180,13 @@
             android:layout_toRightOf="@+id/AnswerSpinner"
             android:layout_below="@+id/AnswerTextView"
             android:layout_alignRight="@+id/MotionCalculate" android:layout_alignEnd="@+id/MotionCalculate"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:textSize="40dp"
+            android:entries="@array/VectorCalc"
+            android:layout_height="wrap_content" android:id="@+id/SpinnerCalc"
+            android:layout_centerHorizontal="true"
+/>
 
 
 </RelativeLayout>
