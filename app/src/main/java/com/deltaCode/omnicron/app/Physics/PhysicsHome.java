@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 import com.deltaCode.omnicron.app.Chemistry.ChemistryHome;
+import com.deltaCode.omnicron.app.Graphing;
 import com.deltaCode.omnicron.app.Physics.Dynamics.DynamicsHome;
 import com.deltaCode.omnicron.app.Physics.Kinematics.KinematicsHome;
 import com.deltaCode.omnicron.app.R;
@@ -18,6 +20,8 @@ public class PhysicsHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physics_home);
+        Toast.makeText(getBaseContext(), "hello", Toast.LENGTH_LONG).show();
+
     }
 
 
@@ -61,6 +65,10 @@ public class PhysicsHome extends AppCompatActivity {
     }
     public void ToDynamicsFromHomeMethod (View view){
         Intent intent=new Intent(this,DynamicsHome.class);
+        this.startActivity(intent);
+    }
+    public void ToGraph (View view){
+        Intent intent=new Intent(this,Graphing.class);
         this.startActivity(intent);
     }
 }

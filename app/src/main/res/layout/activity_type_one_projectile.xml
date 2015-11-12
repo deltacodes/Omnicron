@@ -83,6 +83,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/corner_button"
         android:text="Advanced"
+        android:onClick="toGraph"
         android:id="@+id/typeOneProjectileAdvanceCalculate"
         android:layout_alignBottom="@id/typeOneProjectileCalculate"
         android:layout_alignParentLeft="true"

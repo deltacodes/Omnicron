@@ -64,6 +64,14 @@
             android:name=".Chemistry.UnitConverter"
             android:label="@string/title_activity_unit_converter" >
         </activity>
+        <activity
+            android:name=".Graph"
+            android:label="@string/title_activity_graph" >
+        </activity>
+        <activity
+            android:name=".Graphing"
+            android:label="@string/title_activity_graphing" >
+        </activity>
     </application>
 
 </manifest>

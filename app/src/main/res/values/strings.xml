@@ -38,6 +38,8 @@
     <string name="title_activity_hahaha">hahaha</string>
     <string name="title_activity_periodic_table">PeriodicTable</string>
     <string name="title_activity_unit_converter">UnitConverter</string>
+    <string name="title_activity_graph">Graph</string>
+    <string name="title_activity_graphing">Graphing</string>
 
 
 

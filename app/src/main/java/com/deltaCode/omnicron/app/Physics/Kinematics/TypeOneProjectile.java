@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import com.deltaCode.omnicron.app.Chemistry.ChemistryHome;
+import com.deltaCode.omnicron.app.Graphing;
 import com.deltaCode.omnicron.app.Physics.PhysicsHome;
 import com.deltaCode.omnicron.app.R;
 
@@ -21,6 +22,10 @@ public class TypeOneProjectile extends AppCompatActivity {
     EditText typeOneProjectileTime;
     EditText typeOneProjectileDistance;
     Spinner Spinner;
+    public static double d = 0;
+    public static double h = 0;
+    public static double t = 0;
+    public static double v = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,15 +121,18 @@ public class TypeOneProjectile extends AppCompatActivity {
     }
 
     public void calculate(View view) {
+        calc();
+    }
+    public void calc(){
         boolean Distance = !(typeOneProjectileDistance.getText().toString().isEmpty());
         boolean Height = !(typeOneProjectileHeight.getText().toString().isEmpty());
         boolean Time = !(typeOneProjectileTime.getText().toString().isEmpty());
         boolean Velocity = !(typeOneProjectileVelocity.getText().toString().isEmpty());
         fillEmpty();
-        double d = Double.parseDouble(typeOneProjectileDistance.getText().toString());
-        double h = Double.parseDouble(typeOneProjectileHeight.getText().toString());
-        double t = Double.parseDouble(typeOneProjectileTime.getText().toString());
-        double v = Double.parseDouble(typeOneProjectileVelocity.getText().toString());
+         d = Double.parseDouble(typeOneProjectileDistance.getText().toString());
+         h = Double.parseDouble(typeOneProjectileHeight.getText().toString());
+         t = Double.parseDouble(typeOneProjectileTime.getText().toString());
+         v = Double.parseDouble(typeOneProjectileVelocity.getText().toString());
         boolean cont = true;
         while (cont) {
             cont = false;
@@ -149,7 +157,7 @@ public class TypeOneProjectile extends AppCompatActivity {
                     cont = true;
                     t = Math.sqrt(h / 9.8);
                 }
-                if (Velocity && Distance) {
+                else if (Velocity && Distance) {
                     Time = true;
                     cont = true;
                     t = d / v;
@@ -162,6 +170,7 @@ public class TypeOneProjectile extends AppCompatActivity {
                     h = t * t * 9.8;
                 }
             }
+        }
             typeOneProjectileHeight.setText(Double.toString(round(h)) + " m");
             typeOneProjectileVelocity.setText(Double.toString(round(v)) + " m/s");
             typeOneProjectileTime.setText(Double.toString(round(t)) + " s");
@@ -171,7 +180,7 @@ public class TypeOneProjectile extends AppCompatActivity {
                 typeOneProjectileVelocity.setText("ERROR");
                 typeOneProjectileTime.setText("ERROR");
                 typeOneProjectileDistance.setText("ERROR");
-            }
+
         }
     }
 
@@ -188,6 +197,23 @@ public class TypeOneProjectile extends AppCompatActivity {
 
     public double round(double a) {
         return Math.floor(a * 1000) / 1000;
+    }
+
+
+    public void toGraph(View view){
+        calc();
+        Intent intent = new Intent(this, Graphing.class);
+        /*
+        Bundle bun = new Bundle();
+        bun.putDouble("Height", h);
+        bun.putDouble("VelocityX", v);
+        bun.putDouble("VelocityY", 0);
+        bun.putDouble("Time", t);
+        intent.putExtra("Bundle", bun);*/
+        startActivity(intent);
+
+
+
     }
 }
 

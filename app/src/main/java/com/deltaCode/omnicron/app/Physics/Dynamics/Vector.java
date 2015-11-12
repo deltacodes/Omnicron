@@ -13,7 +13,7 @@ public class Vector {
         if(component){
             ComponentX = box1;
             ComponentY = box2;
-            Magnitude = Math.sqrt(box1*box1-box2*box2);
+            Magnitude = Math.sqrt(box1*box1+box2*box2);
             Direction = Math.atan(box2/box1);
         }
         else{

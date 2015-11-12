@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Energy"
+            android:onClick="ToGraph"
             android:textSize="40dp"
             android:width="300dp"
             android:id="@+id/ToEnergyFromHome" android:layout_below="@+id/ToDynamicsFromHome" android:layout_centerHorizontal="true"
